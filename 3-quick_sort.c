@@ -1,6 +1,20 @@
 #include "sort.h"
 
 /**
+ * swap_int - swaps integers
+ * @a: address of int
+ * @b: address of int
+ *
+ * Return: nothing
+ */
+void swap_int(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+/**
  * lomuto_partition - divides and conquers
  * @array: The array of integers
  * @size: The size of the array
