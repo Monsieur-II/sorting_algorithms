@@ -23,18 +23,16 @@ void swap_int(int *a, int *b)
  */
 void shell_sort(int *array, size_t size)
 {
-	int lin;
-	int gap, i, j;
+	size_t  gap, i, j;
 
 	if (!(array && size > 1))
 		return;
 
-	lin = int(size);
-	for (gap = 1; gap < (lin / 3); gap = gap * 3 + 1)
+	for (gap = 1; gap < (size / 3); gap = gap * 3 + 1)
 		;
 	for (; gap >= 1; gap /= 3)
 	{
-		for (j = gap; j < lin; j++)
+		for (j = gap; j < size; j++)
 		{
 			for (i = j - gap; &array[i] >= array; i -= gap)
 			{
